@@ -11,7 +11,7 @@ from utils.functions.markup_buttons import start_markup
 from utils.functions.yt_utils import get_yt_details, download_yt_thumbnails
 
 
-@Client.on_message(filters.command("start"))
+@Client.on_message(filters.command("vstart"))
 async def pm_start(_, message: Message):
     bot_username, bot_name, _ = await bot.get_my()
     chat_id = message.chat.id
@@ -93,7 +93,7 @@ async def pm_start(_, message: Message):
         )
 
 
-@Client.on_message(filters.command("help"))
+@Client.on_message(filters.command("vkkhelp"))
 async def help_cmds_(_, message: Message):
     chat_id = message.chat.id
     return await message.reply(
